@@ -8,6 +8,7 @@ class Matrix
 {
 public:
 	Matrix();
+	Matrix(unsigned rc);
 	Matrix(unsigned rows, unsigned columns);
 	~Matrix();
 
@@ -30,6 +31,8 @@ public:
 	matrix operator *= (const matrix& Matr2);
 	matrix operator /= (const matrix& Matr2);
 	bool operator == (const matrix& Matr2) const;
+	bool isEqualMatrix(const matrix& Matr1, const matrix& Matr2) const;
+	bool isEqualRowCol(const matrix& Matr1, const matrix& Matr2) const;
 	std::vector<double>& operator [](unsigned r);
 private:
 	matrix Matr;
