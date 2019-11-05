@@ -18,8 +18,8 @@ void printMatrix(const Matrix& matr)
 
 int main()
 {
-	Matrix matr(5, 5);
-	matr.fillRandValue(-10, 15);
+	Matrix matr(3, 3);
+	matr.fillRandValue(-10, 25);
 	printMatrix(matr);
 	cout << endl;
 	cout << matr.Detr();

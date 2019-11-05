@@ -186,6 +186,7 @@ Matrix Matrix::operator/(double number) const
 		for (unsigned i = 0; i < Result.size(); i++)
 			for (unsigned j = 0; j < Result[i].size(); j++)
 				Result[i][j] /= number;
+		return Result;
 	}
 }
 
@@ -293,7 +294,7 @@ bool Matrix::isEqualColRow(const Matrix & Matr1, const Matrix & Matr2) const
 
 bool Matrix::isOutOfRange(const Matrix& Matr1, int n, int m) const
 {
-	return ((n >= 0 && n <= Matr1.size()) && (m >= 0 && m <= Matr[m].size())) ? true : false;
+	return ((n >= 0 && n <= Matr1.size()) && (m >= 0 && m <= Matr1[n].size())) ? true : false;
 }
 
 double Matrix::Detr() const
