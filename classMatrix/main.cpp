@@ -22,7 +22,11 @@ int main()
 	matr.fillRandValue(-10, 25);
 	printMatrix(matr);
 	cout << endl;
-	cout << matr.Detr();
+	cout << matr.Detr() << endl;
+
+	
+	matr(2, 2) = 5;
+	printMatrix(matr);
 
 	//Matrix matr(2, 3);
 	//Matrix matr2(3, 2);

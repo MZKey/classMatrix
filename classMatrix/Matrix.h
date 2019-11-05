@@ -61,7 +61,8 @@ public:
 	double Detr() const;
 	std::vector<double>& operator [](unsigned r);
 	const std::vector<double>& operator [](const unsigned r) const;
-
+	double& operator ()(unsigned r, unsigned c);
+	const double& operator ()(unsigned r, unsigned c) const;
 };
 
 //class Vector : std::vector<double>

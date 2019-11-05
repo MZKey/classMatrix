@@ -150,6 +150,16 @@ const std::vector<double>& Matrix::operator[](const unsigned index) const
 	return this->Matr[index];
 }
 
+double & Matrix::operator()(unsigned r, unsigned c)
+{
+	return this->Matr[r][c];
+}
+
+const double & Matrix::operator()(unsigned r, unsigned c) const
+{
+	return this->Matr[r][c];
+}
+
 Matrix Matrix::operator+(const Matrix& Matr2) const
 {
 	if (isEquaSizelMatrix(*this, Matr2))
